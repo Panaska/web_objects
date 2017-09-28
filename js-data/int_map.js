@@ -1,0 +1,20 @@
+$(document).ready(function(){
+    $("#th1").click(function(){
+        $("#mount").toggleClass("origin");
+    });
+	$("#th2").click(function(){
+        $("#ocean").toggleClass("origin");
+    });
+	$("#th3").click(function(){
+        $("#ind").toggleClass("origin");
+    });
+	$("#th4").click(function(){
+        $("#gang").toggleClass("origin");
+    });
+	$("#th5").click(function(){
+        $("#indostan").toggleClass("origin");
+    });
+	$("#th6").click(function(){
+        $("#bengal").toggleClass("origin");
+    });
+});
