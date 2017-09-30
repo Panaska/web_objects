@@ -1,0 +1,111 @@
+/* Базовый контейнер табов */
+.tabs {
+  min-width: 320px;
+  max-width: 95%;
+  padding: 0px;
+  margin: 0 auto;
+  
+}
+/* Стили секций с содержанием */
+.tabs section {
+  display: none;
+  padding: 15px;
+  background: #fff;
+  border: 1px solid #ddd;
+}
+.tabs input {
+  display: none;
+}
+
+/* Стили вкладок (табов) */
+.main .tabs label {
+  display: inline-block;
+  margin: 0 0 -1px;
+  padding: 5px 5px;
+  text-align: center;
+  color: #aaa;
+  border: 1px solid #ddd;
+  background: #f1f1f1;
+  border-radius: 3px 3px 0 0;
+  width: 16%;
+  white-space:nowrap;
+  font-size:0.95em;
+  font-weight:bold;
+}
+/* Шрифт-иконки от Font Awesome в формате Unicode */
+.main .tabs label:before {
+  font-family: fontawesome;
+  font-weight: normal;
+  margin-right: 10px;
+}
+
+/* Изменения стиля заголовков вкладок при наведении */
+.main .tabs label:hover {
+  color: #888;
+  cursor: pointer;
+}
+/* Стили для активной вкладки */
+.main .tabs input:checked + label {
+  color: #098197;
+  border: 1px solid #ddd;
+  border-top: 3px solid #ff6600;
+  border-bottom: 1px solid #fff;
+  background: #fff;
+  width: 18%;
+  font-size:1.1em;
+}
+/* Активация секций с помощью переключателя :checked */
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3,
+#tab4:checked ~ #content4,
+#tab5:checked ~ #content5  {
+  display: grid;   
+   grid-template-columns: 30% 70%; 
+ grid-template-rows: 1fr; 
+  grid-gap: 1.5em 0.8em;
+}
+
+.tabs_left {
+	align-self: center;
+    justify-self: center;
+}
+
+.rule {font-size:1.6em;
+text-align:center;
+display:table-cell;
+align-self:center;
+justify-self:center;
+}
+
+
+div.rule p.sentence {
+	font-size:0.8em;
+	margin-top:2em;}
+	
+div.rule .bold {
+	 color: #098197;
+}	
+	
+
+.tabs label {
+	width: 16%;
+}
+
+
+/* медиа запросы для различных типов носителей */  
+@media screen and (max-width: 680px) {
+.tabs  label {
+    font-size: 0;
+  }
+
+.tabs  label:before {
+    margin: 0;
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 400px) {
+ .tabs label {
+    padding: 15px;
+  }
+}    

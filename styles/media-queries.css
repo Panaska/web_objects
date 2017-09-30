@@ -1,0 +1,125 @@
+
+ /*Это работает, тк max-width высчитывается относительно разрешения экрана*/
+
+ @media screen and (max-width:2048px) { 
+body {font-size: 20pt;}
+.spoiler_key label.btn1 {left: 95%;}
+.popup {min-width: 1000px;
+max-width: 1400px;}
+.interaktiv .result{width:15em;}
+}
+
+ @media screen and (max-width:1920px) { 
+body {font-size: 18pt;}
+.spoiler_key label.btn1 {left: 94.5%;}
+.popup {min-width: 800px;
+max-width: 1200px;}
+.interaktiv .result{width:15em;}
+}
+
+@media screen and (max-width:1440px) { 
+body {font-size: 16pt;}
+.spoiler_key label.btn1 {left: 94%;}
+.popup {min-width: 600px;
+max-width: 1000px;}
+.interaktiv .result{width:15em;}
+}
+
+ @media screen and (max-width:1366px) { 
+body {font-size: 16pt;}
+.spoiler_key label.btn1 {left: 94%;}
+.popup {min-width: 600px;
+max-width: 900px;}
+.interaktiv .result{width:14em;}
+}
+
+@media screen and (max-width:1280px) { 
+body {font-size: 14pt;}
+audio {width: 450px;}
+
+.spoiler_key label.btn1 {left: 93.5%;}
+.popup {min-width: 320px;
+max-width: 600px;}
+.interaktiv .result{width:14em;}
+
+
+svg#Layer_1th {
+width:100%;}
+}
+ 
+@media screen and (max-width:1024px) {
+body {font-size: 14pt;}
+audio {width: 300px;}
+
+.spoiler_key label.btn1 {left: 93%;}
+
+.main {padding-left: 2em;}
+
+.right h5 {font-size:0.9em;}
+
+.right h5 a {padding-left: 2.2em;}
+
+.right h5.doc_facts,
+.right h5.slovar,
+.right h5.gold,   
+.right h5.hrest, 
+.right h5.istok,
+.right h5.int,
+.right h5.media, 
+.right h5.fun, 
+.right h5.person, 
+.right h5.resh_vmesh,
+.right h5.trener,
+.right h5.znatok,
+.right h5.control,
+.right h5.zoo,
+.right h5.ntb   {background-size: 1.5em; background-position-x:0.25em;background-position-y: 0.5em;}
+
+.back {font-size: 0.85em;}
+
+.spoiler .text {word-wrap: break-word;}
+
+.popup {min-width: 420px;
+max-width: 750px;}
+
+.head {height: 1.75em;}
+
+.interaktiv .result{width:13em;}
+
+.interaktiv .drop{width:12%;}
+
+.interaktiv .save{width:12%;}
+
+.interaktiv .check_your{width:12%;}
+
+himc {white-space:normal!important;}
+
+.riddles .back .left_img {
+	max-width:40%;
+}
+
+}
+
+
+@media screen and (max-height:800px) {
+body {font-size: 12pt;}
+p {line-height: 1.25em;}
+a p {padding:5px;}
+}
+
+@media screen and (max-height:450px) {
+body {font-size: 9pt;}
+p {line-height: 1.15em;}
+a p { padding:2px;}
+}
+
+@media screen and (min-height:801px) {
+.spoiler_shem {
+font-size: 0.85em;
+}
+#floatTip {
+	font-size: 0.7em;
+}
+
+} 
+

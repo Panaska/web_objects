@@ -1,0 +1,156 @@
+.test_drag_table{
+width:100%;
+position:relative;
+border-radius:1em; 
+-webkit-border-radius:1em; 
+-moz-border-radius:1em; 
+-khtml-border-radius:1em;
+
+}
+
+.stolb{
+width:5%;
+max-width:5%;
+/*vertical-align:middle;*/
+/*padding-bottom:2em;*/
+position:relative;
+text-align:center;
+height:100%;
+min-height: 3em;
+}
+
+.sobir {
+position:relative;
+top:0;
+width:100%;
+max-width:100%;
+min-height:3em;
+/*height:100%;*/
+}
+
+.rastask{
+width:15%;
+position:relative;
+padding: 0.4em;
+display:inline-block;
+cursor:pointer;
+margin-left: 0.5em;
+margin-top: 0.5em;
+background:#FFF;
+box-shadow: 0 0 0.4em 0.1em;
+-webkit-box-shadow:0 0 0.4em 0.1em;
+-moz-box-shadow: 0 0 0.4em 0.1em;
+text-align: center;
+border-radius:1em; 
+-webkit-border-radius:1em; 
+-moz-border-radius:1em; 
+-khtml-border-radius:1em;
+z-index:5;
+font-size: 0.8em;
+}
+
+
+.rastask.clone{
+width:90%;
+margin-top: 0.5em;
+			margin-left: 0em;
+			left: 0em;
+			display: block;
+			box-shadow : 0 0 0.2em 0.1em black;
+			-webkit-box-shadow:0 0 0.2em 0.1em black;
+			-moz-box-shadow: 0 0 0.2em 0.1em black;
+			z-index: 2;
+}
+
+
+.rastask_no{
+width:15%;
+position:relative;
+padding: 0.4em;
+display:inline-block;
+cursor:pointer;
+margin-left: 0.5em;
+margin-top: 0.5em;
+background:#FFF;
+box-shadow: 0 0 0.4em 0.1em;
+-webkit-box-shadow:0 0 0.4em 0.1em;
+-moz-box-shadow: 0 0 0.4em 0.1em;
+text-align: center;
+border-radius:1em; 
+-webkit-border-radius:1em; 
+-moz-border-radius:1em; 
+-khtml-border-radius:1em;
+z-index:5;
+font-size: 0.8em;
+}
+
+.rastask figure{
+width:90%;
+
+}
+
+.rastask img{
+width:100%;
+}
+
+.rastask figcaption{
+text-align:center;
+
+}
+
+.rasp{
+word-wrap: break-word;
+width:auto;
+z-index:1;
+margin:1em auto;
+
+}
+
+.rasp table {
+border: 2px solid #42c6eb; 
+background:#FFF;
+border-collapse: collapse;
+width:100%;
+}
+.rasp table tr, .rasp table th , .rasp table td {
+border: 2px solid #42c6eb; 
+padding:10px;
+width: 5%;
+}
+
+.rast td {
+width: 5%;
+}
+
+
+.trow {
+height:100%;
+min-height: 3em;
+}
+
+
+
+.butCheck {
+position: relative;
+margin-top:2em;
+left:1em;
+bottom:1em;
+}
+
+.vopr{
+position:relative;
+padding: 1em;
+margin-top: 2em;
+min-width:90%;
+min-height: 6em;
+background:#f5f5f5;
+ border-radius:1em; 
+/* border: 0.1em solid #42c6eb; */
+-webkit-border-radius:1em; 
+-moz-border-radius:1em; 
+-khtml-border-radius:1em;
+}
+
+
+
+

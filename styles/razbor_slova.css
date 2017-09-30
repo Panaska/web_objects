@@ -1,0 +1,147 @@
+ /* Связь с вопросом */
+
+span.tie {
+ text-indent:0.2em;	
+   position: relative;
+  display: inline-block;
+ background:none;
+ }
+.tie:before {
+content: "";
+    display: table;
+	margin:0 auto;
+    position: absolute;
+
+ border-top: 0.1em solid black;
+    border-left: 0.1em solid black;
+    border-right: 0.1em solid black;  
+	
+
+    margin-left: 1em;
+    width: 70%;
+    height: 0.9em;
+    bottom: 1.5em;
+} 
+
+span.strelka { 
+content: "";
+    display: inline-block;
+    position: absolute;
+    border-left: 0.5em solid rgba(255, 241, 190, 0);
+    border-right: 0.5em solid rgba(255, 241, 190, 0);
+    border-top: 0.5em solid black;
+}
+
+
+span.verh {
+    display: table;
+    top: 1em;
+    /* right: 10%; */
+    margin: 0 auto;
+    position: relative;
+}
+span.krest {display:block; position:relative;top:0.5em;}
+/*  */
+ 
+ span.base_begin,
+ span.prefix,
+ span.root,
+ span.suffix,
+span.connect,
+span.base_end,
+ span.root,
+ span.suffix,
+ span.end {
+ text-indent:0em;
+ }
+
+.prefix, .root, .suffix, .base, .base_begin, .base_end {
+  position: relative;
+  display: inline-block;
+}
+.prefix:before, .root:before, .suffix:before{ 
+  content: "";
+  display: block;
+  position: absolute;
+  border: solid black;
+  border-width: 0em;
+  width: 100%;
+  height: 0.4em;
+  top: 0.2em;
+}
+
+
+.base:before {
+  content: "";
+  display: block;
+  position: absolute;
+  border: solid black;
+  left: -0.1em;
+  border-width: 0em;
+  width: 100%;
+  height: 0.4em;
+  top: 1.2em;
+  border-width: 0 0.01em 0.01em 0.01em;
+}
+
+.base_begin:before {
+  content: "";
+  display: block;
+  position: absolute;
+  border: solid black;
+  left: -0.1em;
+  border-width: 0em;
+  width: 100%;
+  height: 0.4em;
+  top: 1.2em;
+  border-width: 0 0 0.15em 0.15em;
+}
+
+.base_end:before {
+  content: "";
+  display: block;
+  position: absolute;
+  border: solid black;
+  left: 0em;
+  border-width: 0em;
+  width: 100%;
+  height: 0.4em;
+  top: 1.2em;
+  border-width: 0 0.15em 0.15em 0;
+}
+
+.prefix:before {
+  border-width: 0.15em 0.15em 0 0;
+}
+
+.root:before {
+  height: 0.8em;
+  border-width: 0.15em 0 0 0;
+  border-radius: 50% 50% 0 0;
+}
+
+.suffix:before {
+  border-width: 0.15em 0.15em 0 0;
+  padding-top: 40%;
+  height: 0;
+  width: 50%;
+  margin-left: 20%;
+  -webkit-transform: rotate(-30deg) skew(30deg);
+}
+
+.end {
+  display: inline-block;
+  border: 0.1em solid black;
+padding-top: 0em;
+padding-right: 0.2em;
+padding-bottom: 0em;
+padding-left: 0.2em;
+}
+
+.connect {
+  display: inline-block;
+
+  border: 0.15em solid black;
+  padding: 0.01em 0.36em;
+  border-radius: 100%;
+}

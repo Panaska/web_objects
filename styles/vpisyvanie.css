@@ -1,0 +1,7 @@
+.write {
+	
+	height:1em; 
+	font-size: 1em;
+	width:2em;
+	min-width:2em;	/*не убирать! нужно для корректной работы js*/
+}

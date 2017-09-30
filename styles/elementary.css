@@ -1,0 +1,215 @@
+﻿
+/*Ссылки*/
+a {
+color: #098197;
+/*0AB7D3*/
+/*3BD1E3*/
+/*098197*/
+/*1CD0DB*/
+}
+
+
+/* Верхняя панель с иконками*/
+header {
+background-color: #0AB7D3;
+
+}
+
+
+header div h1 {
+color: #FFF;
+}
+
+header div h2 {
+color: #FFF;
+}
+
+
+/*  Спойлер Ключевой вопрос*/
+
+.spoiler_key label.btn1 {
+background: #0AB7D3;
+}
+
+.btn2 a {
+color: #0AB7D3; 
+}
+
+
+.spoiler_key .text {
+background-color: #f5f5f5;
+border-bottom: 2px solid #098197;
+}
+
+
+
+
+/*Шапки*/
+h1 {
+color: #098197;
+}
+
+h2 {
+color: #098197;
+}
+
+h3 {
+color: #098197;
+}
+
+h4 {
+color:#098197;
+}
+
+/** Правое поле **/
+
+.right h3 {
+color:#098197;
+}
+
+
+.right h5 {
+border-bottom: 1px solid #0AB7D3;
+}
+
+.right h5:nth-child(1) {
+border-top: 1px solid #0AB7D3;
+}
+
+
+
+
+/*  Спойлер */
+
+.inline-spoiler  .btn {color: #098197;
+}
+
+
+/*  Глоссарий  */
+
+.gloss {
+color: #098197;
+border-bottom:  1px solid #0AB7D3;
+}
+
+.gloss h3 {color:#098197;
+}
+
+.gloss ul li:hover {
+color: #42c6eb;
+}
+
+/*Меню слева - внутренности*/
+
+.voice:after {
+border-bottom:2px dashed #4682B4;
+}
+
+
+div.voice p.label>a:before {
+	border-left: 0.4em solid #4682B4;
+}
+
+
+/*Вопрос для обсуждения*/
+.question_discuss {
+color: #000;
+border-bottom: 1px solid #0AB7D3;
+border-top: 1px solid #0AB7D3;
+}
+
+.question_discuss a {
+color:#098197;
+}
+
+
+div.interaktiv button {
+border:2px solid #0AB7D3;
+color:#0AB7D3;
+background:#fff;
+}
+div.interaktiv button:hover {
+background:#0AB7D3;
+color:#fff;
+}
+input.write {
+border:1px solid #0AB7D3;
+}
+
+.head {
+background-color: #0AB7D3;
+}
+
+div.block_1 {
+border: 2px solid #ff6600;
+}
+
+.main .tabs input:checked + label {
+border-top:3px solid #FF6600 !important;
+}
+
+div.opredelenie {
+border-top: 3px solid #fec133;
+border-bottom: 3px solid #fec133;
+}
+
+
+/*** Left Menu ***/
+
+.hidden-menu, .hidden-menu2 {
+
+  background-color: #f5f5f5;
+  border-right: 2px solid #0AB7D3;
+}
+
+
+.btn-menu, .btn-menu2 {
+  color: #fff;
+  background-color: #0AB7D3;
+}
+
+.hidden-menu-ticker:checked ~ .btn-menu, .hidden-menu-ticker2:checked ~ .btn-menu2 {
+  background-color: #0AB7D3;
+}
+
+.hidden-menu h3{
+color: #098197;
+}
+.hidden-menu a {
+color: #098197;
+}
+
+/* Стиль оформления таблиц */
+
+.main table th {color: #098197;}
+
+.ccilka {
+	color:#fff; 
+	text-decoration:underline;
+	cursor:pointer;
+}
+   
+   
+ .showText .ccilka {
+	 color:#098197; 
+	 text-decoration:none;
+	 }
+   
+
+#floatTip {z-index:100000!important;
+background-color:#FBCEB1;
+}
+	
+/*Закладки вертикальные*/
+
+label.pic-btn {
+  background-color: #89e0f0;
+  border-right: 3px solid #0AB7D3;
+  color: #086A7C;
+}
+
+.info-card {
+  background-color: #f5f5f5;
+  border: 1px solid #9c9c9c;
+  border-left: 0px;
+}

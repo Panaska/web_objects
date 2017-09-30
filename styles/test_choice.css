@@ -1,0 +1,27 @@
+.test_choice{
+margin-top:0.5em;
+background:whitesmoke;
+position:relative;
+/*display:flex;*/
+width:90%;
+
+border-radius:1em; 
+-webkit-border-radius:1em; 
+-moz-border-radius:1em; 
+-khtml-border-radius:1em;
+padding:0.5em;
+}
+
+.input_place {
+	background: white;
+	padding-left:1em;
+	padding-bottom:1em;
+}
+
+.input_place p{
+padding-top:0em !important;
+margin-top: 0em !important;
+text-indent: 0em !important;
+font-size: 1em !important;
+}
+

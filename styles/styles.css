@@ -1,0 +1,943 @@
+﻿/*Основные параметры*/
+html {width:100%; height: 100%; overflow:scroll;}
+
+ @font-face {
+    font-family: Open Sans;  /* Имя шрифта  */
+    src: url(../fonts/OpenSans-Regular.ttf); /* Путь к файлу со шрифтом  */
+   }
+   
+ @font-face {
+    font-family: 'open_sansregular';
+    src: url('../fonts/OpenSans-Regular-webfont.eot');
+    src: url('../fonts/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/OpenSans-Regular-webfont.woff') format('woff'),
+         url('../fonts/OpenSans-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+} 
+
+@font-face {
+    font-family: 'OpenSans-Italic'; /*  Имя шрифта  */
+    src: url(../fonts/OpenSans-Italic.ttf);  /* Путь к файлу со шрифтом  */
+   }
+   
+
+ @font-face {
+    font-family: 'OpenSans-Bold'; /* Имя шрифта */ 
+    src: url(../fonts/OpenSans-Bold.ttf); /* Путь к файлу со шрифтом  */
+   }   
+
+@font-face {
+    font-family: 'MathJax_Math'; /* Имя шрифта */
+src: url(../fonts/LatinModernMathJax_Main-Regular.otf); /* Путь к файлу со шрифтом */
+   }    
+ @font-face {
+    font-family: 'MathJax_Math-italic'; /* Имя шрифта */
+src: url(../fonts/MathJax_Main-Italic.woff); /* Путь к файлу со шрифтом */
+   }     
+ 
+
+
+body {
+font-family: 'Open Sans', sans-serif; 
+font-size: 14pt;
+}
+
+
+p {
+line-height: 1.75em;
+/* text-indent:1.2em; */
+}
+
+/*Ссылки*/
+a {
+text-decoration: underline;
+}
+
+li {padding-bottom:0.7em;}
+
+/* Стиль для чисел в математике */
+   en {
+       font-family: 'MathJax_Math'; /* Имя шрифта */
+   font-size:1.25em;
+    line-height:0em;}
+
+   /* Стиль для букв в математике */
+sd {
+    font-family: 'MathJax_Math-italic'; /* Имя шрифта */
+      font-size:1.2em;
+	  line-height:0em;}
+
+/* Стили оформления */
+.bold {
+/* 
+font-family: 'Open Sans', sans-serif;  */
+font-weight: bold;
+    font-family: 'OpenSans-Bold', sans-serif; /* Имя шрифта */ 
+}
+
+.italic {
+/*  font-family: 'Open Sans', sans-serif;  */
+font-family: 'OpenSans-Italic', sans-serif;
+font-style:italic;
+}   
+
+
+
+/* Стиль оформления таблиц */
+.main table, .main table td, .main table th {
+border: 2px solid #98def0;
+border-collapse: collapse;
+padding: 0.5em;
+margin:0em auto;
+text-align:center;
+}
+
+.main table th {text-align:center;}
+
+
+div#first {}
+
+video {
+width:60%; 
+height:auto;}
+
+
+/* Верхняя панель с иконками*/
+header {
+display: block;
+width: 100%;
+padding-bottom:0.4em;
+height: auto;
+position: fixed;
+z-index: 1000;
+box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.theme-title {
+    display: table-cell;
+    width: 95%;
+}
+
+div.header-icons {
+display: block;
+float: left;
+height: 3.5em;
+margin-right: 1em;
+width: 6em;
+}
+
+div#contents-icon {
+display: inline-block;
+width: 3em;
+content: ' ';
+height: 3.5em;
+float: left;
+}
+
+div#desk-book {
+display: inline-block;
+width: 3em;
+content: ' ';
+height: 3.5em;
+}
+
+div.key-quest {
+display: inline-block;
+width: 3em;
+content: url("../img/quest-act.png");
+float: right;
+}
+
+header div h1 {
+color: #FFF;
+display: block;
+font-size: 1.3em;
+font-weight: normal;
+margin: 0px;
+-webkit-margin-before: 0em;
+-webkit-margin-after: 0em;
+margin-right: 2em;
+}
+
+header div h2 {
+color: #FFF;
+display: block;
+font-size: 1em;
+font-weight: normal;
+margin: 0px;
+-webkit-margin-before: 0em;
+-webkit-margin-after: 0em;
+margin-right: 2em;
+}
+
+
+/*  Спойлер Ключевой вопрос*/
+
+.spoiler_key {
+position: fixed;
+right: 0em;
+margin-top: 0.4em;
+box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.spoiler_key label.btn1 {
+cursor: pointer;
+left: 93%;
+position:fixed;
+top: 0px;
+}
+
+.btn2 a {display: block; 
+cursor: pointer; 
+padding-top: 1em; 
+text-align: right;}
+
+
+.spoiler_key .text {
+padding: 0.5em;
+padding-left: 5em;
+width:95vw;
+height: auto;
+color: #000;
+}
+
+.spoiler_key img{
+width:3.2em;
+}
+
+.spoiler_key input[type=checkbox] + .text {display: block;}
+.spoiler_key input[type=checkbox] {display: none;}
+.spoiler_key input[type=checkbox]:checked + .text {display: none; }
+
+.spoiler_key .text h3 {
+padding-left:1em;}
+
+.spoiler_key .text p {
+padding-left:1em;
+text-indent:0em;
+}
+
+
+/* Основной блок*/
+.row {
+display: flex;
+display: flexbox;
+flex-flow: row nowrap;
+/*width:100%;*/
+}
+
+
+
+	/** Блок с основным контентом урока **/
+.main {
+background-color: #FFF;
+/* flex: 3; */
+padding: 0 1em 0;
+width:100%;
+}
+
+	/** Блок правый с доп. рубриками **/
+.right {
+background-color: #f5f5f5;
+flex: 1;
+}
+
+/*Шапки*/
+h1 {
+font-size: 1.5em;
+line-height: 1.6em;
+-webkit-margin-before: 0.3em;
+-webkit-margin-after: 0.3em;
+}
+
+h2 {
+font-size: 1.3em;
+line-height: 1.5em;
+-webkit-margin-before: 0.3em;
+-webkit-margin-after: 0.3em;
+}
+
+h3 {
+font-size: 1.1em;
+-webkit-margin-before: 0.6em;
+-webkit-margin-after: 0.6em;
+}
+
+h3+h4 {
+-webkit-margin-before: -0.5em;
+}
+
+h4 {
+font-size: 1em;
+-webkit-margin-before: 0;
+-webkit-margin-after: 0.6em;
+font-weight: normal;
+}
+
+.main h5 {
+	font-size: 0.9em;
+}
+
+.main h6 {
+font-size: 1.1em;
+-webkit-margin-before: 1.5em;
+-webkit-margin-after: 0em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+font-weight: bold;
+}
+
+
+
+/* Шапка для ТЕТРАДЬ в основном поле */
+.main h3.ntb span{
+font-weight: normal;
+font-size:0.9em;
+padding-left: 2.8em;
+display: table-cell;
+vertical-align: middle;
+}
+.main h3.ntb {
+content:" ";
+background-image:url(../img/ntb.png);
+background-repeat-x: no-repeat;
+background-repeat-y: no-repeat;
+background-repeat: no-repeat;
+background-size: 2em;
+background-position-x:0em;
+background-position-y:0.7em;
+display: table;
+height:2.8em;
+}
+
+
+
+span.bold_a {
+font-weight: bold;
+display: block;
+ }
+
+
+
+/*Работа с рисунками*/
+
+figure {
+margin: 0 auto;
+display: table;
+padding:0; 
+}
+
+figure.h_fig>a>img {width:60%;display:table;margin:0 auto;}
+figure.v_fig>a>img {width:45%;display:table;margin:0 auto;} 
+img {width:100%;margin:0 auto;padding:0;}
+
+figure.h_fig figcaption {
+display: table;
+margin:0 auto;
+text-align: center;
+font-size: 0.9em;
+width:60%;
+}
+
+figure.v_fig figcaption {
+display: table;
+margin:0 auto;
+text-align: left;
+font-size: 0.9em;
+width:45%;
+text-align: center;
+}
+
+figure figcaption {
+display: table;
+margin:0 auto;
+text-align: left;
+font-size: 0.9em;
+width:50%;
+text-align: center;
+}
+
+
+.inline-fig {
+display: block;
+float: left;
+width: 35%;
+padding-bottom: 0em;
+padding-top: 0em;
+margin-right: 1em;
+}
+
+div.input_place figure.inline-fig {
+  display: block;
+  width: 50%;
+  float:none;
+  padding-bottom: 0em;
+  padding-top: 0em;
+  padding-left: 0px;
+  margin: 0;
+}
+
+
+/* figure>img {
+width: 100%;
+}
+figure>a>img {
+width: 100%;
+} */
+
+figure.table{
+width: 80%;
+margin: 0 auto;
+display:table;
+}
+figure.cell {
+display: table-cell;
+width:50%;
+padding:0.7em;
+}
+figure.cell>a>img {
+width: 100%;
+display:table-cell;
+}
+
+figure.full_width {
+width:95%;
+padding:0.3em;
+}
+
+/*Тултипы*/
+     #floatTip, #floatTip1 {
+    position: absolute; 
+	min-width: 200px;
+	max-width: 500px;
+	display: none; 
+    border: 1px solid #ccc; 
+	padding: 4px;
+    font-family: sans-serif; 
+	font-size: 1em;
+    color: #000; 
+	background: #fff;
+	padding:1em;
+	border-radius:10px;
+	z-index:10;
+	text-indent:0em;}
+   
+
+
+	
+/*todo*/
+.todo {color: #000; background-color: red;}
+
+
+
+/*Интерактивная схема*/
+
+.shem {
+margin:0 auto;
+   display: table;
+   border-collapse: collapse;
+ }
+ 
+.shem .shem-row {
+   display: table-row;
+}
+ 
+.shem .shem-cell {
+	padding:0.8em;
+	display: table-cell;
+	text-align: left;
+	vertical-align: top;
+	border-top:5px solid #fff;
+	border-left:5px solid #fff;
+	border-right:5px solid #fff;
+	border-radius:15px 15px 0px 0px;
+	background: #fec133;
+ }
+ .shem .shem-cell_1 {
+	padding:0.5em;
+	display: table-cell;
+	text-align:center;
+	vertical-align: top;
+	border-left:5px solid #fff;
+	border-right:5px solid #fff;
+	border-bottom:5px solid #fff;
+	border-radius:0px 0px 15px 15px;
+	background: #89e0f0;
+ }
+
+.shem .shem-cell_1 a{
+color:#fff;
+font-weight:bold;}   
+
+.shem-cell img {
+width:100%;
+height:auto;
+background:#fff;
+border-radius:5px;
+border: 3px solid #98def0;
+}
+
+.shem p {margin-top:0em !important;
+-webkit-margin-before: 0em !important;
+-webkit-margin-after: 0em !important;
+}
+
+
+.popup h2 { /* заголовок 2 */
+color: #336600;
+text-align: left;
+text-shadow: 0 1px 3px rgba(0,0,0,.3);
+font-size: 22px;
+}
+
+
+.is-image {
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+display:block;
+margin: auto;
+width: 100%;
+height: auto;
+}
+/****************************************/
+
+
+
+/*  Спойлер */
+
+.btn {display: block; cursor: pointer; text-decoration: underline;}
+
+.spoiler .text {
+padding: 0.5em;
+padding-left: 1em;
+margin-top: 0.2em;
+height: auto;
+color: #000;
+background-color: #fff;
+border-bottom: 2px solid #ccc;
+}
+
+.inline-spoiler {display:inline;}
+.inline-spoiler  .btn {display:inline; text-decoration: underline;}
+.inline-spoiler .text {
+padding: 0.5em;
+padding-left: 1em;
+margin-top: 0.2em;
+margin-bottom: 0.7em;
+height: auto;
+color: #000;
+background-color: #fff;
+border: 2px solid #ccc;
+border-top: 0px;
+border-right: 0px;
+border-radius: 10px;
+}
+
+.spoiler input[type=checkbox], .inline-spoiler input[type=checkbox] {display: none;}
+.spoiler input[type=checkbox] + .text, .inline-spoiler input[type=checkbox] + .text {display: none;}
+.spoiler input[type=checkbox]:checked + .text, .inline-spoiler input[type=checkbox]:checked + .text {display: block;}
+
+
+/*  Глоссарий  */
+
+.gloss {
+padding-left: 1.3em;
+padding-top:0.7em;
+padding-bottom:0.75em;
+padding-right:0em;
+}
+
+.gloss h3 {font-size:1.2em;}
+
+.gloss ul {
+display: block;
+list-style-type: none;
+-webkit-margin-before: 0em;
+-webkit-margin-after: 0em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+-webkit-padding-start: 0px;
+}
+
+.gloss ul li {
+padding: 0.2em 0;
+}
+
+.gloss ul li:hover {
+}
+
+
+/*Вопрос для обсуждения*/
+.question_discuss {
+color: #000;
+padding-left: 1.3em;
+padding-right: 0.7em;
+margin-top: 1em;
+padding-bottom: 0.75em;
+}
+.question_discuss h4{
+padding-top: 1em;
+}
+.question_discuss a {
+font-size:1em;
+}
+.question_discuss p {
+text-indent:0em;
+font-size:0.9em;
+line-height: 1.5em;
+}
+
+/*Оформление стихотворения*/
+.stih {
+margin: 0em auto;
+display: table;
+}
+
+.stih p {display: block;
+-webkit-margin-before:0.2em;
+-webkit-margin-after: 0.2em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+text-indent:0em !Important; }
+
+p.autor {
+text-align:right; 
+-webkit-margin-before: 1em; 
+-webkit-margin-after: 0em;
+/*  font-family: 'Open Sans', sans-serif; */
+font-family: 'OpenSans-Italic', sans-serif;
+font-style:italic;
+}
+
+.nazvanie {
+font-weight:bold;
+text-align:center; 
+-webkit-margin-before: 0.7em;
+-webkit-margin-after: 0.7em;
+font-size:1.2em;
+color:#098197;
+}
+
+
+/*Цветные блоки для Изучаем*/
+div .block_1 {
+border:2px solid #fec133;
+border-radius: 7px;
+background: #f5f5f5;
+padding:1em;
+margin-bottom: 1em;
+}
+.block_1 p {
+padding-top:0em;
+-webkit-margin-before: 0em;
+-webkit-margin-after: 0em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+}
+
+
+/*Блок для Обратите внимание*/
+div.vnimanie{
+border-left:5px solid #0ba9c6;
+background-color: #f5f5f5;
+padding:0.5em 1em 0.5em 1.2em;
+border-radius:10px;
+margin-top:1em;
+margin-bottom:1em;
+}
+div.vnimanie p {
+text-indent:0em;
+padding-bottom:0.3em;
+padding-top:0.3em;
+}
+
+/*Блок для Определение*/
+div.opredelenie {
+border-bottom:3px solid #0bb6d2;
+border-top:3px solid #0bb6d2;
+padding:0.5em 1em 0.5em 1.2em;
+border-radius:10px;
+}
+div.opredelenie p{
+text-indent:0em;
+}
+
+
+/*Блок для Образец*/
+div.obrazec {
+border-bottom:3px solid #80c468;
+border-top:3px solid #80c468;
+padding:0.5em 1em 0.5em 1.2em;
+border-radius:10px;
+margin-top:1em;
+}
+div.obrazec p{
+text-indent:0em;
+}
+
+/*Блок для Интерактивов*/
+div.interaktiv{
+margin-top:0.5em;
+margin-bottom:1.3em;
+background-color: #f5f5f5;
+border-radius: 7px;
+padding:1.3em;
+/*width: 92%;*/
+/* max-width: 900px; */
+}
+
+.interaktiv.slide_show {
+padding-top: 0.3em;
+}
+.interaktiv.puzzle, .interaktiv.test_2,  .interaktiv.ruka, .interaktiv.trener, .interaktiv.key, .interaktiv.zoo, .interaktiv.mediateka, .interaktiv.ntb {
+padding-top: 0.5em;
+}
+
+
+
+div.interaktiv_header.eye,
+div.interaktiv_header.puzzle,
+div.interaktiv_header.ruka,
+div.interaktiv_header.test_2, 
+div.interaktiv_header.trener,
+div.interaktiv_header.key,
+div.interaktiv_header.zoo,
+div.interaktiv_header.mediateka, 
+div.interaktiv_header.ntb {
+background-repeat-x: no-repeat;
+background-repeat-y: no-repeat;
+background-repeat: no-repeat;
+background-position-x:0em;
+display:table;
+}
+
+div.interaktiv_header.eye {
+background-image: url("../img/eye.png");
+background-size: 2em;
+background-position-y:0.5em;
+min-height:3em;
+}
+
+div.interaktiv_header.puzzle {
+background-image: url("../img/puzzle.png");
+background-size: 2em;
+background-position-y:0.25em;
+min-height:3em;
+}
+
+div.interaktiv_header.ruka {
+background-image: url("../img/ruka.png");
+background-size: 2em;
+background-position-y:0em;
+min-height:3em;
+}
+
+div.interaktiv_header.test_2 {
+background-image: url("../img/test.png");
+background-size: 2em;
+background-position-y:0.3em;
+min-height:3em;
+}
+
+div.interaktiv_header.trener {
+background-image: url("../img/trener_2.png");
+background-size: 2.5em;
+background-position-y:0.45em;
+min-height:2.4em;
+}
+
+div.interaktiv_header.key {
+background-image: url("../img/quest-act_or.png");
+background-size: 1.5em;
+background-position-y:0.45em;
+min-height:2.4em;
+}
+
+div.interaktiv_header.zoo {
+background-image: url("../img/zoo.png");
+background-size: 2em;
+background-position-y:0.45em;
+min-height:2.4em;
+}
+
+div.interaktiv_header.mediateka {
+background-image: url("../img/mediateka_1.png");
+background-size: 2em;
+background-position-y:0.45em;
+min-height:2.4em;
+}
+
+div.interaktiv_header.ntb {
+background-image: url("../img/ntb.png");
+background-size: 2.5em;
+background-position-y:0.45em;
+min-height:2.6em;
+}
+
+div.interaktiv p {
+margin-top:1em;
+margin-bottom:1em;
+text-indent:0em;
+font-size:0.95em;
+}
+div.interaktiv_header h4 {
+display:table-cell;
+padding-left: 3.2em;
+vertical-align: middle;
+font-size: 1em;
+}
+div.interaktiv_header.eye h4, div.interaktiv_header.puzzle h4 {
+display: table-cell;
+padding-left: 2.9em;
+vertical-align: middle;
+font-size: 1em;
+}
+div.interaktiv_header.test_2 h4 {
+display: table-cell;
+padding-left:2.7em;
+vertical-align: middle;
+font-size: 1em;
+}
+div.interaktiv_header.key h4 {
+display: table-cell;
+padding-left: 2.5em;
+vertical-align: middle;
+font-size: 1em;
+}
+
+.interakt_zadanie {
+background:#fff;
+padding:1.3em;
+}
+div.interaktiv button {
+border:2px solid #3b9d32;
+border-radius:5px;
+padding:0.3em;
+font-size:0.9em;
+color:#3b9d32;
+background:#fff;
+cursor:pointer;
+margin-top:1em;
+margin-bottom:0em;
+}
+div.interaktiv button:hover {
+}
+input.write {
+border-radius:5px;
+font-size:0.9em;
+padding-left:0.4em;
+}
+
+/* Шапка с кнопками проверки */
+.head {
+	padding-top: 0.7em;
+margin-bottom:1em;
+width:95%;
+height: 2em;
+border-radius:0.5em; 
+-webkit-border-radius:0.5em;
+-moz-border-radius:0.5em;
+-khtml-border-radius:0.5em;
+padding-left: 5%;
+
+}
+
+.head div{
+		
+		vertical-align:bottom;
+	display: inline-block;
+
+	
+	background-size:auto 100%;
+	height:100%;
+	bottom:0;
+		margin-left:0.2em;
+
+
+}
+
+.drop{
+	width:10%;
+	background: url("img/1.png") no-repeat;
+		cursor: pointer;
+}
+
+/*.save{
+	width:10%;
+	background: url("img/3.png") no-repeat;
+		cursor: pointer;
+		
+}*/
+
+.check_your{
+	width:10%;
+	background: url("img/6.png") no-repeat;
+		cursor: pointer;
+}
+
+.result{
+	width:40%;
+
+	float:right;
+}
+
+
+.table_card {
+display: table;
+width: 100%;
+border-spacing: 0em 0.5em;
+}
+
+.info-card-sp {
+  width: 100%;
+  display: inherit;
+}
+
+label.pic-btn {
+  cursor: pointer;
+  width: auto;
+  display: table-cell;
+  text-align: center;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  line-height: 2.5em;
+  vertical-align: middle;
+}
+
+.info-card-sp input[type="checkbox"] {
+  display: none;
+}
+
+.info-card-sp input[type=checkbox] + .info-card {
+  display: none;
+}
+
+.info-card-sp input[type=checkbox]:checked + .info-card {
+  display: table-cell;
+}
+
+.info-card {
+  width: 70%;
+  padding: 0.5em;
+  font-size: 1em;
+  vertical-align: middle;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: 0px;
+}
+
+
+table.no-border, .no-border td {border:none !important;}
+	.no-border td {vertical-align:top;}
+	
+	.rasp td {padding:0.3em !important; width: 12.5%;}
+	.rasp figure {padding:0 !important; width:100%;}
+	.trow td .sobir {min-height:1.6em !important;}
+	
+	.orange {background-color:#ffa76b;}
+	
+	.same_input input {width:8em !important;}

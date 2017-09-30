@@ -1,0 +1,37 @@
+table.crossword {
+border:0px !important;
+}
+
+
+.crossword td {
+    width: 2em !important;
+    height: 2em !important;
+    padding: 0em !important;
+	border:0px !important;
+}
+
+.crossword .letter {
+    border: 2px solid #c5c5c5 !important;
+    padding: 0em !important;
+    position: relative;
+}
+
+.crossword input.write {
+    border: 0;
+    width: 2em !important;
+    height: 1.8em !important;
+    padding: 0;
+    padding-top: 0.1em;
+    text-align: center;
+    font-size: 1em;
+    text-transform: uppercase;
+    z-index: 1;
+}
+
+.number {
+    position: absolute;
+    font-size: 0.8em;
+    z-index: 2;
+color:#7d7d7d;
+padding-left:4px;
+}

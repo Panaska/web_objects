@@ -1,0 +1,60 @@
+.job_exercises_connection {
+    text-align: center;
+}
+.job_exercises_connection table {
+    margin: 2px;
+	border: 0px;
+    width: 99%;
+ }
+
+
+ .job_exercises_connection thead tr td {
+font-weight:bold;
+padding-bottom: 15px;
+ }
+ 
+.job_exercises_connection table td {
+    /*border: 1px solid grey;*/
+	border: 0px;
+    padding: 5px;
+	border-radius: 10px;
+}
+
+.job_exercises_connection p {
+    text-align: center;
+	  margin-top: 0em !important;
+  margin-bottom: 0em !important;
+  text-indent: 0em;
+  font-size: 0.95em;
+}
+
+.active{
+    box-shadow: 0 0 5px 1px grey;
+/*}*/
+/*.active {*/
+    cursor: pointer;
+}
+
+.linkItem, .checkItem, .checkItem:hover {
+    box-shadow: 0 0 5px 1px green;
+}
+
+.line {
+    background-color: #60bc57;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    z-index:999;
+}
+
+.rightAnswer {
+    box-shadow: 0 0 5px 1px green;
+}
+
+.falseAnswer {
+    box-shadow: 0 0 5px 1px red;
+}
+
+.zeroAnswer {
+    opacity: 0.3;
+}

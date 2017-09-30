@@ -1,0 +1,330 @@
+.cursor {
+cursor: url("../styles/img/lupa.cur"),url("../styles/img/lupa.cur"),pointer;
+} 
+
+ .not-transform .cursor, .page.not-transform{
+	cursor:default;
+} 
+
+ .not-transform.openBook .cursor{
+	cursor: url("../styles/img/lupa.cur"),url("../styles/img/lupa.cur"),pointer;
+} 
+
+.info_book h3{
+	margin-top:2em;
+	text-align:center;
+	color:black;
+}
+
+.info_book figure.h_fig {width:80%;display:table;margin:0 auto;}
+.info_book figure.h_fig>a>img {
+    width: 100%;
+    display: table;
+    margin: 0 auto;
+}
+
+.info_book figure.v_fig {width:40%;display:table;margin:0 auto;}
+.info_book figure.v_fig>a>img {width:100%;display:table;margin:0 auto;} 
+
+.info_book figure {width:50%;display:table;margin:0 auto;}
+.info_book figure>a>img {width: 100%;display:table;margin:0 auto;}  
+
+.info_book figure figcaption {
+display: table;
+margin:0 auto;
+text-align: left;
+font-size: 0.9em;
+width:100%;}
+
+/*--------------------------------------Маленькая книга-----------------------------------------*/
+
+/*Общий размер маленькой книги*/
+.info_book.small {
+	margin: 0 auto;
+	width:33em;
+	height: 20em;
+   	-webkit-perspective: 3500px; 
+    -moz-perspective: 3500px; 
+    -o-perspective: 3500px;
+    perspective: 3500px;  
+	perspective-origin: left center;
+}
+
+/*Контейнер для книги. Фоном содержит в себе саму книгу, внутри располгаются перелистываемые страницы*/
+.info_book.small .info_book_container {
+	position:absolute; 
+	opacity:0;
+	margin: 0 auto;
+	width:33em;
+	height: 20em;
+	background: url(book/podlojka.png) no-repeat;
+	background-size: 100% 100%;
+	z-index:20;
+ 	-webkit-perspective: 2500px; 
+    -moz-perspective: 2500px; 
+    -o-perspective: 2500px; 
+    perspective: 2500px;   
+	 -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.cover {	/*контейнер для обложки книги для отображения ее  закрытом состоянии*/
+	position: absolute;
+    -webkit-transition: -webkit-transform 0.5s;
+    -moz-transition: -moz-transform 0.5s;
+    -o-transition: -o-transform 0.5s;
+    transition: transform 0.5s; /* трансформации будут происходить анимированно продолжительностью 0.5 сек */
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;   /* указываем, что дочерние элементы находятся в 3D пространстве */
+    -webkit-transform-origin: 0% 0;
+    -moz-transform-origin: 0% 0;
+    -o-transform-origin: 0% 0;
+    transform-origin: 0% 0;
+	z-index:50;
+}
+
+.cover.open {	/*переворот обложки*/
+	-webkit-transform: rotateY( -180deg );
+    -moz-transform: rotateY( -180deg );
+    -o-transform: rotateY( -180deg );
+    transform: rotateY( -180deg );
+}
+
+.info_book.small .cover {	/*параметры контейнера для обложки маленькой книги*/
+	 margin-left: 16.5em; 
+	top: 0;
+    left: 0;
+	width:16.5em;
+	height:20em;
+}
+
+.info_book.small .right_podl_cover{	/*параметры правой подложки книги в закрытой состоянии*/
+	position:absolute;
+	margin-left:16.5em;
+	width:16.5em;
+	height:20em;
+	background: url(book/podlojka-right.png) no-repeat;
+	background-size: 100% 100%;
+	cursor:pointer;
+}
+	
+.book_cover, .left_podl_cover{	/*параметры обложки и левой подложки книги в закрытом состоянии*/
+	 backface-visibility: hidden;
+	 -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+   
+}
+
+.info_book.small .left_podl_cover{	/*параметры левой подложки книги в закрытом состоянии*/
+	position:absolute;
+	width:16.5em;
+	height:20em;
+	background: url(book/podlojka-left.png) no-repeat;
+	background-size: 100% 100%;
+	-webkit-transform: rotateY( -180deg );
+    -moz-transform: rotateY( -180deg );
+    -o-transform: rotateY( -180deg );
+    transform: rotateY( -180deg );
+}
+
+.info_book.small .book_cover{	/*параметры обложки книги в закрытом состоянии*/
+	margin-top:-0.5em;
+	position:absolute;
+	 width:15.5em;
+	 height:21em;
+	 background: url(book/obl.png) no-repeat;
+	background-size: 100% 100%;
+	cursor:pointer;
+}
+
+.book_cover.open{	/*открываем обложку*/
+    -webkit-transform: rotateY( -180deg );
+    -moz-transform: rotateY( -180deg );
+    -o-transform: rotateY( -180deg );
+    transform: rotateY( -180deg );
+	 -webkit-transition: -webkit-transform 0.5s;
+    -moz-transition: -moz-transform 0.5s;
+    -o-transition: -o-transform 0.5s;
+    transition: transform 0.5s; /* трансформации будут происходить анимированно продолжительностью 0.5 сек */
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;   /* указываем, что дочерние элементы находятся в 3D пространстве */
+    -webkit-transform-origin: 0% 0;
+    -moz-transform-origin: 0% 0;
+    -o-transform-origin: 0% 0;
+    transform-origin: 0% 0;
+}
+	
+	
+/*Параметры страниц книги*/		
+
+.info_book.small .page {
+	top:0.4em;
+	padding:1em;
+    width: 13.1em;	/*подбираем ширину страницы*/
+    height: 17em;	/*подбираем высоту страницы*/
+    position: absolute;
+    display: block;
+	backface-visibility: hidden;    /* если элемент "отвернулся" от пользователя, контент этого элемента не виден */
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+	cursor:pointer;
+}
+
+.info_book.small .page.right{	/*правая страницы книги*/
+	margin-left: 16.5em;
+    background: url(book/list_right.png) no-repeat;
+    background-size: 100% 100%;
+	transform: rotatey(0deg);
+	transform-origin: left;
+	transition: transform 0.7s; 
+}
+
+.info_book.small .page.right.flip{	/*переворот правой страницы*/
+	transform: rotatey(-180deg);
+	transform-origin: left;  
+}
+
+.info_book.small .page.left{	/*левая страницы книги*/
+	margin-left: 1.4em;
+	background: url(book/list_left.png) no-repeat;
+    background-size: 100% 100%;
+	transform: rotatey(180deg);
+	transform-origin: right;
+	transition: transform 0.7s; 
+}
+
+.info_book.small .page.left.flip{	/*переворот левой страницы*/
+	transform: rotatey(0deg);
+	transform-origin: right;  
+}
+
+/*-----------------------------------------Большая книга-----------------------------------------*/
+
+/*Общий размер большой книги*/
+.info_book.big {
+	margin: 0 auto;
+	width:38em;
+	height: 26em;
+	-webkit-perspective: 3500px; 
+    -moz-perspective: 3500px; 
+    -o-perspective: 3500px; 
+    perspective: 3500px; 
+	perspective-origin: left center;
+}
+
+/*Контейнер для книги. Фоном содержит в себе саму книгу, внутри располагаются перелистываемые страницы*/
+.info_book.big .info_book_container {
+	 position:absolute; 
+	opacity:0;
+	margin: 0 auto;
+	width:38em;
+	height: 26em;
+	background: url(book/podlojka.png) no-repeat;
+	background-size: 100% 100%;
+	z-index:20;
+	-webkit-perspective: 2500px; 
+    -moz-perspective: 2500px; 
+    -o-perspective: 2500px; 
+    perspective: 2500px;   
+	 -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.info_book.big .cover {	/*параметры контейнера для обложки большой книги*/
+	margin-left: 19em; 
+	top: 0;
+    left: 0;
+	width:19em;
+	height:26em;
+}	
+
+.info_book.big .right_podl_cover{	/*параметры правой подложки большой книги в закрытом состоянии*/
+	position:absolute;
+	margin-left:19em;
+	width:19em;
+	height:26em;
+	background: url(book/podlojka-right.png) no-repeat;
+	background-size: 100% 100%;
+	cursor:pointer;
+}
+
+.info_book.big .left_podl_cover{	/*параметры левой подложки большой книги в закрытом состоянии*/
+	position:absolute;
+	width:19em;
+	height:26em;
+	background: url(book/podlojka-left.png) no-repeat;
+	background-size: 100% 100%;
+	-webkit-transform: rotateY( -180deg );
+    -moz-transform: rotateY( -180deg );
+    -ms-transform: rotateY(-180deg);
+    -o-transform: rotateY( -180deg );
+    transform: rotateY( -180deg );
+}
+
+.info_book.big .book_cover{ /*параметры обложки большой книги в закрытом состоянии*/
+	margin-top:-0.5em;
+	position:absolute;
+	 width:17.7em;
+	 height:27em;
+	 background: url(book/obl.png) no-repeat;
+	background-size: 100% 100%;
+	cursor:pointer;
+}
+
+/*Параметры страниц большой книги*/	
+.info_book.big .page {
+	top:0.5em;
+	padding:1em;
+    width: 15.4em;	/*подбираем ширину страницы*/
+    height: 22.8em;		/*подбираем высоту страницы*/
+    position: absolute;
+    display: block;
+	backface-visibility: hidden;    /* если элемент "отвернулся" от пользователя, контент этого элемента не виден */
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+	cursor:pointer;
+}
+
+.info_book.big .page.right{	/*правая страница*/
+	margin-left: 19em;
+    background: url(book/list_right.png) no-repeat;
+    background-size: 100% 100%;
+	transform: rotatey(0deg);
+	transform-origin: left;
+	transition: transform 0.7s; 
+}
+
+.info_book.big .page.right.flip{	/*переворот правой страницы*/
+	transform: rotatey(-180deg);
+	transform-origin: left;  
+}
+
+.info_book.big .page.left{		/*левая страница*/
+	margin-left: 1.6em;
+	background: url(book/list_left.png) no-repeat;
+    background-size: 100% 100%;
+	transform: rotatey(180deg);
+	transform-origin: right;
+	transition: transform 0.7s; 
+}
+
+.info_book.big .page.left.flip{	/*переворот левой страницы*/
+	transform: rotatey(0deg);	
+	transform-origin: right;  
+}
+
+
+.info_book p {
+	padding-left:1em;
+}

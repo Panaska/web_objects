@@ -1,0 +1,26 @@
+
+
+.wordColorClick_symbol {
+	background:#ff6700;
+}
+
+.wordColor_symbols{
+cursor:pointer;
+
+}
+
+.one_color {
+	display:inline-block;
+	width:2em;
+	height: 1em;
+	cursor:pointer;
+	border-radius:0.5em; 
+-webkit-border-radius:0.5em; 
+-moz-border-radius:0.5em; 
+-khtml-border-radius:0.5em;
+
+}
+
+.color_choice {
+	height:auto;
+}
