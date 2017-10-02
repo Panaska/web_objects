@@ -32,6 +32,7 @@
 	 color:#000;
  }
  
+ 
  a p {
  border-radius:15px;
  padding:5px;
@@ -43,7 +44,9 @@
  margin:0%;
  }
  
- 
+ p.numberPs {
+	 font-family:'Encode Sans Expanded', sans-serif !important;
+ }
  
  /* .span2 {grid-column-end: span 2;
  } 

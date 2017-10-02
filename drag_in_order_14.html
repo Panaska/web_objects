@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/jquery-ui-1.9.2.custom.min.js"></script>
+   <!-- Lightbox -->  	
+		<link href="styles/lightbox.css" rel="stylesheet" type="text/css" />
+		<script src="js/lightbox.min.js" type="text/javascript"></script>
+
+		<script type="text/javascript" src="js/jquery.hoverIntent.min.js"></script>
+		<script type="text/javascript" src="js/jquery.mb.flipText.js"></script>
+  <!-- Аудиоплеер - невидимый -->
+ <script src="MediaElement.js/mediaelement.min.js"></script> 
+ <link rel="stylesheet" href="styles/audioplayer.css" />
+ <script src="js/audioplayer.js"></script>
+
+<!-- Аудиоплеер - всплывающий -->
+<script src="MediaElement.js/mediaelement-and-player.min.js"></script>
+<link rel="stylesheet" href="MediaElement.js/mediaelementplayer.css" />
+<link rel="stylesheet" href="styles/audioplayer_w_controls.css" /> 
+<script src="js/audioplayer_w_controls.js"></script> 
+<!-- Подключение полного видео плеера -->
+<script>
+$(function() {
+  $('audio,video').mediaelementplayer({
+    videoWidth: '100%',
+    videoHeight: '100%'
+  });
+});
+</script>	
+	 <!-- тест установление последовательности -->
+    <script src="js/jquery.ui.touch-punch.min.js"></script> <!-- для планшетов -->
+    <script src="js/test_init_draginorder.js"></script>
+	<script src="js/test_draginorder_jsAction.js"></script><!-- Логика работы теста -->
+	<link rel="stylesheet" href="styles/test_draginorder_cssView.css"><!-- Внешний вид-->
+	<script src="js-data/test_draginorder_data.js"></script>  <!-- Это сборщик, для одной странице может быть только один-->
+</head>
+
+<body id="body"> <!-- onload="allFresh()" --><!-- onunload="allFresh()" -->
+<div class="row">
+		<div class="main">	
+		
+		
+		<!-- START  Установление последовательности -->
+            <div class="interaktiv trener" data-test-name="test1">
+                <div class="interaktiv_header trener">
+                    <h4>Robot fun</h4>
+                </div>
+<p>Listen to&nbsp;dialogue. Place these sentences in&nbsp;order.</p>
+
+<figure class="v_fig">
+						<a href="images/Eng_04_03_07_02.png" data-lightbox=" " data-title=" "><img src="images/Eng_04_03_07_02.png"></a>
+
+<figcaption>Jake and Jen<p><audio id="player2" src="media/Eng_04_03_07_02.mp3" type="audio/mp3" controls="controls" preload=”none”></audio>		</p></figcaption>
+				
+					</figure>		
+		
+
+                <div class="head">
+                    <div class="drop"></div>
+                    <div class="save"></div>
+                    <div class="check_your"></div>
+                    <div class="result"></div>
+                </div>
+
+                <div class="interakt_zadanie">
+                    <div class="job_exercises"></div>
+                </div>
+            </div>
+<!-- End  Установление последовательности -->
+
+
+</div>
+</div>
+	
+</body>
+
+</html>

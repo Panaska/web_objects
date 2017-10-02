@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- Jquery -->
+		<script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
+  <script src="scripts_js_css.js" defer></script>
+  <script src="scripts_ajax.js" defer></script>
+  
+     <!-- Оформление ступени обучения -->
+		<link href="styles/elementary.css" rel="stylesheet" type="text/css" />	
+  <link href="js_styles.css" rel="stylesheet" type="text/css" />
+  <link href="styles/styles.css" rel="stylesheet" type="text/css" />
+
+
+		
+ <script src="js/jquery-ui-1.9.2.custom.min.js"></script>
+<!-- Аудиоплеер - невидимый -->
+ <script src="MediaElement.js/mediaelement.min.js"></script> 
+ <link rel="stylesheet" href="styles/audioplayer.css" />
+ <script src="js/audioplayer.js"></script>
+
+<!-- Аудиоплеер - всплывающий -->
+<script src="MediaElement.js/mediaelement-and-player.min.js"></script>
+<link rel="stylesheet" href="MediaElement.js/mediaelementplayer.css" />
+<link rel="stylesheet" href="styles/audioplayer_w_controls.css" /> 
+<script src="js/audioplayer_w_controls.js"></script> 
+<!-- Подключение полного видео плеера -->
+<script>
+$(function() {
+  $('audio,video').mediaelementplayer({
+    videoWidth: '100%',
+    videoHeight: '100%'
+  });
+});
+</script>	
+  <!-- Lightbox -->  	
+		<link href="styles/lightbox.css" rel="stylesheet" type="text/css" />
+		<script src="js/lightbox.min.js" type="text/javascript"></script>
+		<!-- <script src="js/popup.js" type="text/javascript"></script> -->
+
+		<script type="text/javascript" src="js/jquery.hoverIntent.min.js"></script>
+		<script type="text/javascript" src="js/jquery.mb.flipText.js"></script>
+		
+		
+ <!-- тест установление последовательности -->
+    <script src="js/jquery.ui.touch-punch.min.js"></script> <!-- для планшетов -->
+    <script src="js/test_init_draginorder.js"></script>
+	<script src="js/test_draginorder_jsAction.js"></script><!-- Логика работы теста -->
+	<link rel="stylesheet" href="styles/test_draginorder_cssView.css"><!-- Внешний вид-->
+	<script src="js-data/test_draginorder_data.js"></script>  <!-- Это сборщик, для одной странице может быть только один-->
+		
+			<!-- тест Установление соответствий -->
+        <script src="js/jqueryrotate.2.1.js"></script>
+        <script src="js/test_init_connection.js"></script>
+        <link rel="stylesheet" href="styles/test_connection_cssView.css"><!-- Внешний вид-->
+        <script src="js-data/test_connection_data.js"></script>  <!-- Это сборщик, в нем данные для каждого теста-->
+        <script src="js/test_connection_jsAction.js"></script><!-- Логика работы теста -->
+		
+   <!--Вписывание-->
+         <script type="text/javascript" src="js/vpisyvanie.js"></script> 
+        <link href="styles/vpisyvanie.css" rel="stylesheet" type="text/css" media="screen" />
+		<!-- Кроссворд — работает только с стилями и джс Вписывания, тк сделан на этой базе -->
+        <link href="styles/crossword.css" rel="stylesheet" type="text/css" /> 
+		
+		  
+ 	 <!-- ЗаГадки -->
+<script src="js/zagadki.js" type="text/javascript"></script>
+<link href="styles/zagadki.css" rel="stylesheet" type="text/css" media="screen" />
+
+<!--Растаскивание по колонкам -->
+		  		
+  <link href="styles/rast.css" rel="stylesheet" type="text/css" />
+  <script src="js/rast.js"></script>
+		<!-- Заполнение пропусков -->
+		 <link href="styles/propuski.css" rel="stylesheet" type="text/css" />
+		<script src="js/propuski.js"></script>
+		
+		  <!-- Индивидуальный стиль для оформления схемы-->
+<link href="styles/propuski_mod.css" rel="stylesheet" type="text/css" />
+ <script src="js/propuski_mod.js"></script>
+
+<!-- Раскраска-->
+<link href="styles/int_paint.css" rel="stylesheet" type="text/css" />
+<script src="js/int_paint.js"></script>
+<script src="js-data/int_paint-data.js"></script>
+  <script type="text/javascript" src="js/interact-image.js"></script>
+  
+    <!--Подключение СШ -->
+<!-- <link rel="stylesheet" type="text/css" href="styles/slaidshow.css" /> -->
+<!-- <script type="text/javascript" src="js/slideshow.js"></script> -->
+<!-- <script type="text/javascript" src="js-data/slideshow-data.js"></script> -->
+
+ <!--Подключение Книги-->
+   <script type="text/javascript" src="js/info_book.js"></script>
+   <link href="styles/info_book.css" rel="stylesheet" type="text/css" />
+   <!-- Сборщик для Книги -->
+  <script type="text/javascript" src="js-data/book-data.js"></script>
+
+ <!-- Подключение теста Выбор ответа-->
+		<link href="styles/test_choice.css" rel="stylesheet" type="text/css" />	
+		<script src="js/test_multiple.js"></script>
+		
+<script src="js-data/int_map.js" type="text/javascript"></script>
+<script src="js-data/int_ris.js" type="text/javascript"></script>
+<script type="text/javascript" src="js-data\table-script.js"></script>
+ <!--Тултипы -->
+<script src="js/tooltip.js" type="text/javascript"></script> 
+<!-- Разбор слова по составу -->
+ <link href="styles/razbor_slova.css" rel="stylesheet" type="text/css" /> 
+<!-- Табсы - Закладки -->
+<link href="styles/tabs.css" rel="stylesheet" type="text/css" />
+
+<!-- Выделение цветом-->
+		<script src="js/text_coloring.js"></script>
+		<link href="styles/color_text.css" rel="stylesheet" type="text/css" />	
+		
+	 <!--Выделение симловов цветом -->
+        <link href="styles/color_text_colorChoose_symbols.css" rel="stylesheet" type="text/css" />
+        <script src="js/color_text_colorChoose_symbols.js"></script>
+		<!-- Адаптация под разные разрешения экранов -->
+		<link href="styles/media-queries.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Encode+Sans+Expanded" rel="stylesheet">
+</head>
+
+<body id="body"> <!-- onload="allFresh()" --><!-- onunload="allFresh()" -->
+
+</body>
+
+</html>

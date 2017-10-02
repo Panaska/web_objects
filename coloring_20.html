@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <script src="js/jquery-1.11.0.min.js"></script>
+   <!-- Lightbox -->  	
+		<link href="styles/lightbox.css" rel="stylesheet" type="text/css" />
+		<script src="js/lightbox.min.js" type="text/javascript"></script>
+
+		<script type="text/javascript" src="js/jquery.hoverIntent.min.js"></script>
+		<script type="text/javascript" src="js/jquery.mb.flipText.js"></script>
+
+<!-- Раскраска-->
+<link href="styles/int_paint.css" rel="stylesheet" type="text/css" />
+<script src="js/int_paint.js"></script>
+<script src="js-data/int_paint-data.js"></script>
+</head>
+
+<body id="body"> <!-- onload="allFresh()" --><!-- onunload="allFresh()" -->
+		<div class="row">
+		<div class="main">	
+		
+		<!-- START Тренажёр. Раскраска -->
+<div class="interaktiv trener">
+	<div class="interaktiv_header trener">
+		<h4>Color the bear</h4>
+	</div>
+	<p>Do the calculations and color the bear with the right colors.</p>
+	<div class="head">
+		<div class="drop"></div>
+		<div class="save"></div>
+		<div class="check_your"></div>
+		<div class="result"></div>
+	</div>
+
+	<div class="interakt_zadanie">
+		<!--Подкючается шаблон для раскрашивания-->
+		<div class="int_paint" testCheck="true">	<!--Если в шаблоне не должна выполняться проверка, то убрать атрибут testCheck-->
+					 <div class="colors_for_painting">    <!--панель для выборов цветов для раскрашивания -->
+					 <p style="padding-left:0.7em;"><him>3</him></p>
+					 <p style="padding-left:0.7em;"><him>4</him></p>
+<p style="padding-left:0.7em;"><him>5</him></p>
+<p style="padding-left:0.7em;"><him>6</him></p>
+<p style="padding-left:0.7em;"><him>7</him></p>
+<p style="padding-left:0.7em;"><him>8</him></p>
+<p style="padding-left:0.7em;"><him>9</him></p>
+<p></p>
+			
+		<div class="color_paint" number="1" style="background-color: #ccc"></div> <!-- grey -->
+		<div class="color_paint" number="2" style="background-color: #8cc63f"></div> <!-- gren -->
+		<div class="color_paint" number="3" style="background-color: #fbb03b"></div> <!-- orange -->
+		<div class="color_paint" number="4" style="background-color: #ba9bc9"></div> <!-- violet -->
+		<div class="color_paint" number="0" style="background-color: #fdf6e3"></div> <!-- cream -->
+		<div class="color_paint" number="5" style="background-color: #464451"></div> <!-- dark grey -->
+		<div class="color_paint" number="6" style="background-color: #BC987E"></div> <!-- brown -->
+
+		<div class="color_paint delete_color"  number="100" style="background-color: #fff; border:1px solid gray">Remove</div> <!--для удаления-->	  
+                    </div>
+					
+					<div class="painting_area">	<!--область для раскрашивания, содержит в себе элементы для раскрашивания-->	
+						<!--Для того, чтобы элемент нельзя было окрасить подключаем в svg в теге <g> атрибут stopPainting="true"-->
+						<!--В атрибуте neededColor в svg в теге <g> указываем номер цвета, в который должен быть окрашен элемент (для проверки)-->
+						<!-- Значение padding-top по умолчанию равно 70%. Чтобы подкорректировать размеры изображения или блока object_for_painting, нужно изменить значение этого параметра. -->
+						<div class="object_for_painting" style="width:100%; padding-top: 58%;"></div>						
+					</div>
+		</div>
+	</div>	
+</div>
+<!--  -->
+
+</div>
+</div>
+	
+</body>
+
+</html>

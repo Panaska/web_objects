@@ -1,9 +1,12 @@
 "use strict";
 
+
+
 creatingPs();
 boxShadowStyles();
 wrappingDivs();
 namesOfBlocks();
+creatingPopups();
 setClassesForOpenWindows();
 allFresh();
 
@@ -111,7 +114,7 @@ function wrappingDivs() {
 function namesOfBlocks() {
 	var nodelist = document.getElementsByClassName("numberPs").length;
     
-var namesArray = [ "English. Word Grid", "English. Table Scheme", "English. Spoiler Scheme", "English. The Book", "English. Tabs", "English. Colours", "English. Riddles", "English. Crossword", "English. New Words", "English. Slide-Show", "English. Highlighting", "English. Connections", "English. Drag-in-Table", "English. Drag-in-Picture","English. Drag-in-Order", "Chemistry. Table", "History. SVG Picture", "History. SVG Scheme", "Geography. SVG River Map", "Geography. Map with Layers", "Maths. Colouring",  "Maths. Addithion and subtraction", "Maths. Fractions", "Maths. Checkbox" ];
+var namesArray = [ "English. Word Grid", "English. Table Scheme", "English. Spoiler Scheme", "English. The Book", "English. Tabs", "English. Colors", "English. Riddles", "English. Crossword", "English. New Words", "English. Slide-Show", "English. Highlighting", "English. Connections", "English. Drag-in-Table", "English. Drag-in-Picture","English. Drag-in-Order", "Chemistry. Table", "History. SVG Picture", "History. SVG Scheme", "Geography. SVG River Map", "Geography. Map with Layers", "Maths. Coloring",  "Maths. Addition and subtraction", "Maths. Fractions", "Maths. Checkbox" ];
 //var [name0, name1, name2, ...rest] = namesArray;
     for (var i = 0; i < nodelist; i++) {
 	var spans = document.createElement("span");
@@ -132,6 +135,51 @@ var namesArray = [ "English. Word Grid", "English. Table Scheme", "English. Spoi
 
 	
     //"name1".replace(name1);
+}
+
+function creatingPopups() {
+    var nodelist = document.getElementsByClassName("numberPs").length;
+
+    for (var i = 0; i < nodelist; i++) {
+		 var divOverlay = document.createElement("div");
+		var att1 = document.createAttribute("class");
+        var att2 = document.createAttribute("id");
+        var att3 = document.createAttribute("href");
+         att1.value = "overlay";
+         att2.value = "twh"+i;
+         att3.value = "#x";
+		
+		var divPopup = document.createElement("div");
+		 var att4 = document.createAttribute("class");
+		 att4.value="popup"
+		
+		 var divAjax = document.createElement("div");
+		 var att5 = document.createAttribute("class");
+		 att5.value="ajax"+i;
+		
+		 var aClose = document.createElement("a");
+		 var att6 = document.createAttribute("class");
+        var att7 = document.createAttribute("title");
+         var att8 = document.createAttribute("href");
+		 att6.value = "close";
+         att7.value = "Закрыть";
+         att8.value = "#close";
+		
+		document.body.appendChild(divOverlay);
+		document.body.appendChild(divPopup).appendChild(divAjax);
+		document.body.appendChild(divPopup).appendChild(aClose);
+		
+		 var divClass = divOverlay.setAttributeNode(att1);
+		 var divId = divOverlay.setAttributeNode(att2);
+		 var divHref = divOverlay.setAttributeNode(att3);
+		 var divClassNext = divPopup.setAttributeNode(att4);
+		 var divClassIn = divAjax.setAttributeNode(att5);
+		 var aClass = aClose.setAttributeNode(att6);
+		 var aTitle = aClose.setAttributeNode(att7);
+		 var aHref = aClose.setAttributeNode(att8);
+
+    }
+
 }
 
 function setClassesForOpenWindows() {	
@@ -158,7 +206,7 @@ function setClassesForOpenWindows() {
 		 return function() {
 			  counting = "#twh" + x;
 			  $(counting +"+ .popup").removeClass("active"+x);
-			  location.reload(true);
+			  // location.reload(true);
 			  };
 		 
 	}(i));
@@ -186,3 +234,4 @@ function allFresh() {
  window.addEventListener("load", location.href = "#close");
  // $("#body").onunload = function(){location.href = "#close"};
 }
+

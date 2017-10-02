@@ -1,0 +1,271 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+		<script src="js/jquery-1.11.0.min.js"></script>
+		 <!-- Lightbox -->  	
+		<link href="styles/lightbox.css" rel="stylesheet" type="text/css" />
+		<script src="js/lightbox.min.js" type="text/javascript"></script>
+
+		<script type="text/javascript" src="js/jquery.hoverIntent.min.js"></script>
+		<script type="text/javascript" src="js/jquery.mb.flipText.js"></script>
+   <!--Вписывание-->
+         <script type="text/javascript" src="js/vpisyvanie.js" defer></script> 
+        <link href="styles/vpisyvanie.css" rel="stylesheet" type="text/css" media="screen" />
+		<!-- Кроссворд — работает только с стилями и джс Вписывания, тк сделан на этой базе -->
+        <link href="styles/crossword.css" rel="stylesheet" type="text/css" /> 
+
+</head>
+
+<body id="body"> <!-- onload="allFresh()" --><!-- onunload="allFresh()" -->
+
+		<div class="row">
+		<div class="main">	
+		
+<!-- Кроссворд на базе вписывания -->	
+<div class="interaktiv trener">
+	<div class="interaktiv_header trener">
+		<h4>Crossword</h4>
+	</div>
+<p>Look at the pictures. Decide what the words are and solve the crossword.</p>
+					
+<p><span class="bold">Across:</span></p>
+<table class="no-border">
+<tr><td style="width:16%;margin:0;"><p>1.</p>
+<figure style="width:98%;margin:0;">
+<a href="images/30.png" data-lightbox=" " data-title=" "><img src="images/30.png"/></a>
+</figure></td><td style="width:16%;margin:0;"><p>2.</p>
+<figure style="width:98%;margin:0;">
+<a href="images/31.png" data-lightbox=" " data-title=" "><img src="images/31.png"/></a>
+</figure></td>
+<td style="width:16%;margin:0;"><p>3.</p>
+<figure style="width:98%;margin:0;">
+<a href="images/32.png" data-lightbox=" " data-title=" "><img src="images/32.png"/></a>
+</figure></td>
+<td style="width:16%;margin:0;"><p>4.</p>
+<figure style="width:98%;margin:0;">
+<a href="images/33.png" data-lightbox=" " data-title=" "><img src="images/33.png"/></a>
+</figure></td>
+<td style="width:16%;margin:0;"><p>5.</p>
+<figure style="width:98%;margin:0;">
+<a href="images/34.png" data-lightbox=" " data-title=" "><img src="images/34.png"/></a>
+</figure></td>
+<td style="width:16%;margin:0;"><p>6.</p>
+<figure style="width:98%;margin:0;">
+<a href="images/35.png" data-lightbox=" " data-title=" "><img src="images/35.png"/></a>
+</figure></td>
+</tr>
+<tr><td><p>7.</p>
+<figure style="width:98%;margin:0;">
+<a href="images/36.png" data-lightbox=" " data-title=" "><img src="images/36.png"/></a>
+</figure></td><td><p>8.</p>
+<figure style="width:98%;margin:0;">
+<a href="images/37.png" data-lightbox=" " data-title=" "><img src="images/37.png"/></a>
+</figure></td><td><p>9.</p>
+<figure style="width:98%;margin:0;">
+<a href="images/38.png" data-lightbox=" " data-title=" "><img src="images/38.png"/></a>
+</figure></td><td><p>10.</p>
+<figure style="width:98%;margin:0;">
+<a href="images/9.png" data-lightbox=" " data-title=" "><img src="images/39.png"/></a>
+</figure></td><td><p>11.</p>
+<figure style="width:98%;margin:0;">
+<a href="images/40.png" data-lightbox=" " data-title=" "><img src="images/40.png"/></a>
+</figure></td><td></td><td></td><td></td><td></td></tr>
+</table>
+                    <div class="head">
+                        <div class="drop"></div>
+                        <div class="save"></div>
+                        <div class="check_your"></div>
+                        <div class="result"></div>
+                    </div>
+                <!-- Чтобы засчитывалось несколько ответов как правильные нужно вписывать варианты ответов через знак - $ -->
+                    <div class="interakt_zadanie">
+                        <div class="interaktiv_vpisyvanie"> 
+                            <table class="crossword">
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="letter"><div class="number">1</div><input type="text" class="write" name="m$M"/></td>
+                                    <td class="letter"><input type="text" class="write" name="U$u"/></td>                                   
+                                    <td class="letter orange"><input type="text" class="write orange" name="s$S"/></td>
+                                    <td class="letter"><input type="text" class="write" name="s$S"/></td>
+                                    <td class="letter"><input type="text" class="write" name="E$e"/></td>
+                                    <td class="letter"><input type="text" class="write" name="l$L"/></td>
+                                    <td class="letter"><input type="text" class="write" name="s$S"/></td>
+                                    <td></td>
+                                </tr>
+								
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="letter"><div class="number">2</div><input type="text" class="write" name="P$p"/></td>
+                                    <td class="letter"><input type="text" class="write" name="o$O"/></td>                                   
+                                    <td class="letter orange"><input type="text" class="write orange" name="U$u"/></td>
+                                    <td class="letter"><input type="text" class="write" name="l$L"/></td>
+                                    <td class="letter"><input type="text" class="write" name="T$t"/></td>
+                                    <td class="letter"><input type="text" class="write" name="r$R"/></td>
+                                    <td class="letter"><input type="text" class="write" name="y$Y"/></td>
+                                    <td></td>
+                                </tr>	
+								
+                                <tr>
+                                    <td class="letter"><div class="number">3</div><input type="text" class="write" name="L$l"/></td>
+                                    <td class="letter"><input type="text" class="write" name="o$O"/></td>
+                                   <td class="letter"><input type="text" class="write" name="L$l"/></td>
+                                   <td class="letter"><input type="text" class="write" name="L$l"/></td>								   
+                                    <td class="letter"><input type="text" class="write" name="i$I"/></td>
+                                    <td class="letter orange"><input type="text" class="write orange" name="P$p"/></td>
+									
+                                    <td class="letter"><input type="text" class="write" name="o$O"/></td>
+                                    <td class="letter"><input type="text" class="write" name="P$p"/></td>									
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+								
+                                <tr>
+									
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>								
+                                    <td></td>								
+                                    <td class="letter"><div class="number">4</div><input type="text" class="write" name="B$b"/></td>
+                                    <td class="letter orange"><input type="text" class="write orange" name="e$E"/></td>
+                                    <td class="letter"><input type="text" class="write" name="e$E"/></td>
+                                   <td class="letter"><input type="text" class="write" name="F$f"/></td>
+								   
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>								
+                                <tr>
+									
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>								
+                                    <td></td>								
+                                    <td class="letter"><div class="number">5</div><input type="text" class="write" name="p$P"/></td>
+                                    <td class="letter orange"><input type="text" class="write orange" name="R$r"/></td>
+                                    <td class="letter"><input type="text" class="write" name="a$A"/></td>
+                                   <td class="letter"><input type="text" class="write" name="W$w"/></td>
+                                   <td class="letter"><input type="text" class="write" name="n$N"/></td>
+                                   <td class="letter"><input type="text" class="write" name="S$s"/></td>
+
+                                    <td></td>
+                                </tr>							
+                                <tr>								
+                                    <td class="letter"><div class="number">6</div><input type="text" class="write" name="m$M"/></td>
+                                    <td class="letter"><input type="text" class="write" name="a$A"/></td>									
+                                    <td class="letter"><input type="text" class="write" name="R$r"/></td>
+
+                                   <td class="letter"><input type="text" class="write" name="S$s"/></td>
+                                   <td class="letter"><input type="text" class="write" name="h$H"/></td>								
+                                    <td class="letter orange"><input type="text" class="write orange" name="m$M"/></td>								   
+                                    <td class="letter"><input type="text" class="write" name="a$A"/></td>								   
+                                   <td class="letter"><input type="text" class="write" name="L$l"/></td>
+                                   <td class="letter"><input type="text" class="write" name="L$l"/></td>
+                                   <td class="letter"><input type="text" class="write" name="o$O"/></td>
+                                   <td class="letter"><input type="text" class="write" name="W$w"/></td>
+
+                                </tr>
+								
+                                <tr>	
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+                                    <td class="letter"><div class="number">7</div><input type="text" class="write" name="B$b"/></td>
+                                    <td class="letter orange"><input type="text" class="write orange" name="a$A"/></td>
+									<td class="letter"><input type="text" class="write" name="n$N"/></td>
+                                    <td class="letter"><input type="text" class="write" name="a$A"/></td>	
+									<td class="letter"><input type="text" class="write" name="n$N"/></td>
+                                    <td class="letter"><input type="text" class="write" name="a$A"/></td>									
+								<td></td>
+
+                                </tr>
+								
+                                <tr>	
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+                                    <td class="letter"><div class="number">8</div><input type="text" class="write" name="c$C"/></td>
+                                    <td class="letter orange"><input type="text" class="write orange" name="R$r"/></td>
+                                    <td class="letter"><input type="text" class="write" name="a$A"/></td>	
+									<td class="letter"><input type="text" class="write" name="b$B"/></td>
+								
+								<td></td>
+								<td></td>
+								<td></td>
+
+                                </tr>								
+                                <tr>	
+								<td></td>
+								<td></td>
+                                    <td class="letter"><div class="number">9</div><input type="text" class="write" name="P$p"/></td>
+                                    <td class="letter"><input type="text" class="write" name="o$O"/></td>
+                                    <td class="letter"><input type="text" class="write" name="R$r"/></td>
+
+                                    <td class="letter orange"><input type="text" class="write orange" name="K$k"/></td>	
+
+								
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+
+                                </tr>	
+								
+                                <tr>	
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+                                    <td class="letter"><div class="number">10</div><input type="text" class="write" name="j$J"/></td>
+                                    <td class="letter orange"><input type="text" class="write orange" name="E$e"/></td>
+                                    <td class="letter"><input type="text" class="write" name="l$L"/></td>
+                                    <td class="letter"><input type="text" class="write" name="l$L"/></td>
+
+                                    <td class="letter"><input type="text" class="write" name="I$i"/></td>	
+                                    <td class="letter"><input type="text" class="write" name="e$E"/></td>	
+                                    <td class="letter"><input type="text" class="write" name="S$s"/></td>	
+
+
+
+                                </tr>
+                                <tr>	
+								<td></td>
+								<td></td>
+                                    <td class="letter"><div class="number">11</div><input type="text" class="write" name="p$P"/></td>
+                                    <td class="letter"><input type="text" class="write" name="A$a"/></td>
+                                    <td class="letter"><input type="text" class="write" name="s$S"/></td>
+                                    <td class="letter orange"><input type="text" class="write orange" name="T$t"/></td>
+
+                                    <td class="letter"><input type="text" class="write" name="r$R"/></td>	
+                                    <td class="letter"><input type="text" class="write" name="I$i"/></td>	
+                                    <td class="letter"><input type="text" class="write" name="e$E"/></td>	
+                                    <td class="letter"><input type="text" class="write" name="S$s"/></td>	
+
+								
+								<td></td>
+	
+
+                                </tr>
+                               
+                            </table>
+							
+                        </div>
+
+</div>
+</div>
+<!-- Конец Кросворда -->
+</div>
+</div>
+	
+</body>
+
+</html>
